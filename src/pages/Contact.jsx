@@ -39,7 +39,7 @@ export default function Contact() {
 
             <section style={{ padding: '72px 0 88px' }}>
                 <div className="container-custom">
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.6fr', gap: '32px' }}>
+                    <div className="rg-contact">
 
                         {/* Contact Info */}
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>

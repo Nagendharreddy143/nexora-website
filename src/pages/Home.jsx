@@ -45,7 +45,7 @@ export default function Home() {
                 <div className="orb" style={{ width: '300px', height: '300px', bottom: '-40px', left: '-60px', background: 'radial-gradient(circle, rgba(27,37,64,0.07), transparent 70%)', animationDelay: '4s' }} />
 
                 <div className="container-custom" style={{ position: 'relative', zIndex: 1, width: '100%' }}>
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '64px', alignItems: 'center' }}>
+                    <div className="rg-hero">
 
                         {/* Left */}
                         <div className="animate-fade-in-up">
@@ -66,14 +66,14 @@ export default function Home() {
                                     <span key={v} style={{ padding: '4px 12px', borderRadius: '20px', background: 'rgba(27,37,64,0.06)', color: M, fontSize: '12px', fontFamily: 'Inter', border: '1px solid rgba(27,37,64,0.1)' }}>{v}</span>
                                 ))}
                             </div>
-                            <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
+                            <div className="btn-row">
                                 <Link to="/contact" className="btn-primary animate-pulse-glow" style={{ fontSize: '15px', padding: '14px 28px' }}>Start Your Journey →</Link>
                                 <Link to="/hotlist" className="btn-glass" style={{ fontSize: '15px', padding: '13px 27px' }}>View Bench Hotlist</Link>
                             </div>
                         </div>
 
                         {/* Right — Glass Stats */}
-                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }} className="animate-fade-in-up delay-200">
+                        <div className="rg-stats">
                             {stats.map((stat) => (
                                 <div key={stat.label} className="glass" style={{ padding: '32px 20px', textAlign: 'center' }}>
                                     <div className="stat-number">{stat.number}</div>
@@ -101,7 +101,7 @@ export default function Home() {
                         <h2 className="section-title">Three Ways We Accelerate<br /><span className="text-gradient">Your US IT Career</span></h2>
                         <p className="section-subtitle" style={{ marginTop: '14px' }}>From marketing your profile to sending 60 applications daily — our services compress your timeline.</p>
                     </div>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px,1fr))', gap: '24px' }}>
+                    <div className="rg-cards">
                         {services.map(s => (
                             <Link key={s.title} to={s.link} style={{ textDecoration: 'none' }}>
                                 <div className="glass" style={{ padding: '36px 28px', height: '100%', cursor: 'pointer', position: 'relative', overflow: 'hidden' }}>
@@ -130,7 +130,7 @@ export default function Home() {
                         </div>
                         <Link to="/hotlist" className="btn-glass">View Full Hotlist →</Link>
                     </div>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px,1fr))', gap: '16px' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px,1fr))', gap: '16px' }}>
                         {hotlistData.slice(0, 4).map(c => (
                             <div key={c.id} className="glass-card" style={{ padding: '22px' }}>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '14px' }}>
@@ -161,7 +161,7 @@ export default function Home() {
                         <h2 className="section-title">The Unfair Advantage<br /><span className="text-gradient">for IT Consultants</span></h2>
                         <p className="section-subtitle" style={{ marginTop: '14px' }}>We don't just submit your resume — we own your placement campaign end-to-end.</p>
                     </div>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px,1fr))', gap: '20px' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px,1fr))', gap: '20px' }}>
                         {whyUs.map(item => (
                             <div key={item.title} className="glass-card" style={{ padding: '28px 24px' }}>
                                 <div style={{ fontSize: '28px', marginBottom: '14px' }}>{item.icon}</div>
@@ -217,7 +217,7 @@ export default function Home() {
                     <p style={{ fontSize: '17px', color: 'rgba(255,255,255,0.65)', lineHeight: '1.75', maxWidth: '520px', margin: '0 auto 36px' }}>
                         Join 500+ consultants already getting placed through Nexora Pro's powerful bench sales and application engine.
                     </p>
-                    <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
+                    <div className="btn-row" style={{ justifyContent: 'center' }}>
                         <Link to="/contact" className="btn-white animate-pulse-glow" style={{ fontSize: '15px', padding: '15px 32px' }}>Free Consultation →</Link>
                         <Link to="/jobs" style={{ fontSize: '15px', padding: '14px 30px', background: 'rgba(255,255,255,0.1)', color: '#fff', border: '1px solid rgba(255,255,255,0.25)', borderRadius: '10px', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', backdropFilter: 'blur(8px)', transition: 'all 0.3s', fontFamily: 'Poppins', fontWeight: '600' }}>Browse Open Jobs</Link>
                     </div>

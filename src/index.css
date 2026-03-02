@@ -579,3 +579,241 @@ h6 {
   min-height: 100vh;
   width: 240px;
 }
+
+/* ============================================================
+   RESPONSIVE UTILITY CLASSES
+   ============================================================ */
+
+/* Responsive grid helpers */
+.rg-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.rg-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.rg-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.rg-cols2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.rg-cols3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.rg-footer {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+}
+
+.rg-contact {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 32px;
+}
+
+/* Flex button rows */
+.btn-row {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* ============================================================
+   TABLET  ≤ 900px
+   ============================================================ */
+@media (max-width: 900px) {
+  .rg-hero {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+
+  .rg-contact {
+    grid-template-columns: 1fr !important;
+  }
+
+  .rg-footer {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .rg-cols2 {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ============================================================
+   PHONE  ≤ 640px
+   ============================================================ */
+@media (max-width: 640px) {
+
+  /* Container */
+  .container-custom {
+    padding: 0 14px;
+  }
+
+  /* Section padding */
+  section {
+    padding-top: 56px !important;
+    padding-bottom: 56px !important;
+  }
+
+  /* Grids → single column */
+  .rg-hero {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  .rg-stats {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+  }
+
+  .rg-cards {
+    grid-template-columns: 1fr !important;
+  }
+
+  .rg-cols2 {
+    grid-template-columns: 1fr !important;
+  }
+
+  .rg-cols3 {
+    grid-template-columns: 1fr !important;
+  }
+
+  .rg-footer {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+
+  .rg-contact {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Typography */
+  .section-title {
+    font-size: clamp(20px, 6vw, 30px) !important;
+  }
+
+  .section-subtitle {
+    font-size: 14px !important;
+  }
+
+  .stat-number {
+    font-size: 34px !important;
+  }
+
+  /* Buttons — full width stacked */
+  .btn-row {
+    flex-direction: column;
+  }
+
+  .btn-row .btn-primary,
+  .btn-row .btn-glass,
+  .btn-row .btn-outline,
+  .btn-row .btn-white {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  .btn-primary,
+  .btn-glass,
+  .btn-outline,
+  .btn-white {
+    font-size: 14px !important;
+    padding: 12px 18px !important;
+  }
+
+  /* Cards */
+  .glass {
+    padding: 20px 16px !important;
+    border-radius: 12px !important;
+  }
+
+  .glass-card {
+    padding: 16px 14px !important;
+    border-radius: 10px !important;
+  }
+
+  .glass-strong {
+    padding: 24px 18px !important;
+  }
+
+  /* Hero section */
+  section.hero-bg {
+    padding: 28px 0 48px !important;
+    min-height: unset !important;
+  }
+
+  /* Testimonial card */
+  .testimonial-card {
+    padding: 28px 20px !important;
+  }
+
+  /* Form inputs — prevent iOS auto-zoom */
+  .form-input {
+    font-size: 16px !important;
+  }
+
+  /* Footer bottom bar */
+  .footer-bottom-bar {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+  }
+
+  /* Navbar pill becomes tighter */
+  .home-pt {
+    padding-top: 82px !important;
+  }
+
+  /* Modal full-screen on phone */
+  .apply-modal-inner {
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: 0 !important;
+    min-height: 100dvh !important;
+    padding: 24px 16px !important;
+  }
+}
+
+/* ============================================================
+   SMALL PHONE  ≤ 400px
+   ============================================================ */
+@media (max-width: 400px) {
+  .rg-stats {
+    grid-template-columns: 1fr !important;
+  }
+
+  .stat-number {
+    font-size: 28px !important;
+  }
+
+  .section-title {
+    font-size: 20px !important;
+  }
+
+  .badge {
+    font-size: 10px !important;
+    padding: 4px 10px !important;
+  }
+
+  .container-custom {
+    padding: 0 10px;
+  }
+}

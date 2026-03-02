@@ -22,7 +22,7 @@ export default function Footer() {
             paddingTop: '56px',
         }}>
             <div className="container-custom">
-                <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr', gap: '40px', paddingBottom: '48px', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
+                <div className="rg-footer" style={{ paddingBottom: '48px', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
 
                     {/* Brand */}
                     <div>
@@ -54,7 +54,7 @@ export default function Footer() {
                     ))}
                 </div>
 
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '24px 0', flexWrap: 'wrap', gap: '12px' }}>
+                <div className="footer-bottom-bar" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '24px 0', flexWrap: 'wrap', gap: '12px' }}>
                     <div style={{ color: 'rgba(255,255,255,0.35)', fontSize: '13px', fontFamily: 'Inter' }}>
                         © 2024 Nexora Pro Tech Systems. All rights reserved.
                     </div>
