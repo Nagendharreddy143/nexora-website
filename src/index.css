@@ -667,10 +667,32 @@ h6 {
     padding: 0 14px;
   }
 
-  /* Section padding */
-  section {
-    padding-top: 56px !important;
-    padding-bottom: 56px !important;
+  /* --- FIX: Collapse the double top gap ---
+     page-bg = 90px (inline) + hero section top padding = too much.
+     Override page-bg top padding and zero-out hero section top.
+  */
+  .page-bg {
+    padding-top: 78px !important;
+  }
+
+  /* First section inside page-bg (hero) — remove its top padding,
+     page-bg already handles the nav offset */
+  .page-bg>section:first-child {
+    padding-top: 4px !important;
+    padding-bottom: 40px !important;
+  }
+
+  /* Home page hero specifically */
+  section.hero-bg {
+    padding-top: 0 !important;
+    padding-bottom: 40px !important;
+    min-height: unset !important;
+  }
+
+  /* All other inner sections — reduce but don't zero */
+  .page-bg>section:not(:first-child) {
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
   }
 
   /* Grids → single column */
