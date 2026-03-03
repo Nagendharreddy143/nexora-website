@@ -16,7 +16,7 @@ const team = [
 
 export default function About() {
     return (
-        <div className="page-bg" style={{ paddingTop: '90px' }}>
+        <div className="page-bg home-pt">
             <section style={{ padding: '80px 0 64px', background: 'linear-gradient(150deg, #fff 0%, #F5F0E8 100%)', borderBottom: '1px solid rgba(27,37,64,0.07)', position: 'relative', overflow: 'hidden' }}>
                 <div className="orb" style={{ width: '400px', height: '400px', top: '-80px', right: '-80px', background: 'radial-gradient(circle, rgba(191,59,45,0.08), transparent 70%)' }} />
                 <div className="container-custom" style={{ position: 'relative', zIndex: 1 }}>
